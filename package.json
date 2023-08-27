@@ -1,7 +1,7 @@
 {
   "name": "forguncy-guide",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,7 +15,11 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^20.5.6",
     "@vitejs/plugin-vue": "^4.2.3",
+    "fast-glob": "^3.3.1",
+    "gray-matter": "^4.0.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vitepress": "^1.0.0-rc.4",
