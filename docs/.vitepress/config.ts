@@ -49,7 +49,7 @@ export default defineConfig({
     },
     
     lastUpdated: {
-      text: '最后一次更新于'
+      text: '最后更新'
     },
 
     socialLinks: [
