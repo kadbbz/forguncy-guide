@@ -1,27 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM"],
-    "skipLibCheck": true,
-    
+    "outDir": "dist",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-
-    /* Linting */
+    "allowJs": true,
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@theme/*": [".vitepress/theme/*"]
+    }
   },
-  "include": [
-    "docs",
-    "docs/.vitepress/components/*.vue",
-    "docs/.vitepress/*.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["env.d.ts", "src/**/*", ".vitepress/**/*"]
 }
