@@ -1,5 +1,5 @@
 import { DefaultTheme, defineConfig } from 'vitepress'
-import { baseUrl, github, siteDescription, siteTitle } from './meta'
+import { baseUrl, github, siteDescription, siteTitle } from './meta.mts'
 
 /* 顶部的导航菜单 */
 const nav : DefaultTheme.Config['nav'] = [
@@ -13,7 +13,7 @@ const nav : DefaultTheme.Config['nav'] = [
     activeMatch: '^/guide'
   },
   {
-    text: '最佳实践',
+    text: '标准化',
     link: '/standard/introduction',
     activeMatch: '^/standard'
   },
@@ -91,23 +91,57 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/standard/': [
     { text: '简介', link: '/standard/introduction' },
-    { text: '架构设计', link: '/standard/architecture' },
+    { text: '术语说明', link: '/standard/idioms' },
     {
-      text: 'UX',
+      text: '架构',
+      collapsed: true,
       items: [
-        { text: '全局样式', link: '/standard/ux/global-style' },
-        { text: '设计模式', link: '/standard/ux/design-pattern' },
-        { text: '可视化', link: '/standard/ux/visualization' },
-        { text: '图形化', link: '/standard/ux/graphical' }
+        { text: '系统架构', link: '/standard/arch/sys-arch' },
+        { text: '生命周期', link: '/standard/arch/life-cycle' },
+        { text: '部署方案', link: '/standard/arch/deployment' },
+      ]
+    },
+    {
+      text: 'UI & UX',
+      items: [
+        { text: '设计原则', link: '/standard/design/principle' },
+        { 
+          text: '样式',
+          items: [
+            { text: '主题色', link: '/standard/design/theme' },
+            { 
+              text: '布局',
+              collapsed: true,
+              items: [
+                { text: '总览', link: '/standard/design/layout/' },
+                { text: '画布标定', link: '/standard/design/layout/canvas' },
+                { text: '适配方案', link: '/standard/design/layout/adapt' },
+                { text: '网格单位', link: '/standard/design/layout/grip' },
+                { text: '常用模度', link: '/standard/design/layout/modulus' },
+              ]
+            },
+            { text: '字体', link: '/standard/design/typeface' },
+          ]
+        },
+        { 
+          text: '模式',
+          items: [
+            { text: '距离', link: '/standard/design/model/distance' },
+            { text: '对齐', link: '/standard/design/model/alignment' },
+            { text: '页面', link: '/standard/design/model/page' },
+            { text: '反馈', link: '/standard/design/model/feedback' },
+          ]
+        },
       ]
     },
     {
       text: '开发',
       items: [
+        { text: '开发原则', link: '/standard/dev/principle' },
         {
           text: '基础规约',
           items: [
-            { text: '命名风格', link: '/standard/dev/naming-style' },
+            { text: '命名风格', link: '/standard/dev/base/naming-style' },
             { text: '数据处理', link: '/standard/dev/data-processing' },
             { text: '异常与日志', link: '/standard/dev/exception-and-log' },
             { text: '注释', link: '/standard/dev/annotation' },
@@ -155,7 +189,7 @@ export default defineConfig({
   description: siteDescription,
   
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg' }]
+    ['link', { rel: 'icon',href: '/favicon.svg' }]
   ],
   
 
