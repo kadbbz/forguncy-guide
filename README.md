@@ -1,18 +1,46 @@
-# Vue 3 + TypeScript + Vite
+# 格言格语
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+售前团队的文本资料汇集地，活字格技术方案的图书馆。
 
-## Recommended IDE Setup
+本工程基于 [vitepress](https://vitepress.dev/guide/what-is-vitepress) 构建。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 环境依赖
 
-## Type Support For `.vue` Imports in TS
+- node 18+
+- npm 
+- Vue 3 + TypeScript + Vite
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## 运行
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+1. 当前目录下，终端运行 `npm install`，安装项目所有依赖。
+2. 依赖安装成功后，终端运行 `npm run docs:dev`，启动开发环境。
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+   > 终端运行 `npm run docs-expose:dev` 可将本地的服务对外暴露。
+
+3. 浏览器访问对应路径即可本地查看文档。
+
+## 结构说明
+
+```text
+├── docs
+│   ├── .vitepress
+│   │   ├── config.mts
+│   │   └── meta.mts
+│   ├── guide
+│   ├── index.md
+│   ├── public
+│   ├── solution
+│   └── standard
+└── package.json
+```
+
+- `package.json`: 工程配置
+- `docs`: 文档目录
+  
+    - `.vitepress`: 文档配置目录，其中 `config.mts` 为配置文件，导航、菜单、样式、交互等都在此进行配置。`meta.mts` 为配置所依赖的元数据。
+    - `public`: 静态资源。
+    - `guide`: 学习指南根目录。
+    - `solution`: 解决方案根目录。 
+    - `standard`: 标准化根目录。
+    - `index.md`: 首页。
+
