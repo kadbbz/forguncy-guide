@@ -94,7 +94,6 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
     { text: '术语说明', link: '/standard/idioms' },
     {
       text: '架构',
-      collapsed: true,
       items: [
         { text: '系统架构', link: '/standard/arch/sys-arch' },
         { text: '生命周期', link: '/standard/arch/life-cycle' },
@@ -107,6 +106,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '设计原则', link: '/standard/design/principle' },
         { 
           text: '样式',
+          collapsed: true,
           items: [
             { text: '主题色', link: '/standard/design/theme' },
             { 
@@ -125,6 +125,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
         },
         { 
           text: '模式',
+          collapsed: true,
           items: [
             { text: '距离', link: '/standard/design/model/distance' },
             { text: '对齐', link: '/standard/design/model/alignment' },
@@ -140,41 +141,51 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '开发原则', link: '/standard/dev/principle' },
         {
           text: '基础规约',
+          collapsed: true,
           items: [
             { text: '命名风格', link: '/standard/dev/base/naming-style' },
-            { text: '数据处理', link: '/standard/dev/data-processing' },
-            { text: '异常与日志', link: '/standard/dev/exception-and-log' },
-            { text: '注释', link: '/standard/dev/annotation' },
-            { text: '组件', link: '/standard/dev/component' },
-            { text: '服务端通知', link: '/standard/dev/websocket' },
-            { text: '报表', link: '/standard/dev/report' },
-            { text: '工作流', link: '/standard/dev/workflow' },
-            { text: '文档', link: '/standard/dev/docs' },
+            { text: '界面设计', link: '/standard/dev/base/page-design' },
+            { text: '业务处理', link: '/standard/dev/base/business' },
+            { text: '异常捕获', link: '/standard/dev/base/exception' },
+            { text: '组件复用', link: '/standard/dev/base/component' },
+            { text: '文档注释', link: '/standard/dev/base/docs' },
           ],
         },
-        { text: '数据库',
+        { 
+          text: '数据库',
+          collapsed: true,
           items: [
-            { text: '选型', link: '/standard/dev/database-selection' },
-            { text: '建表规约', link: '/standard/dev/table-created' },
-            { text: '索引规约', link: '/standard/dev/table-index' },
-            { text: '数据检索', link: '/standard/dev/data-retrieval' }
+            { text: '类型选择', link: '/standard/dev/database/selection' },
+            { text: '模型设计', link: '/standard/dev/database/model' },
+            { text: '数据检索', link: '/standard/dev/database/retrieval' }
           ],
         },
-        { text: '工程结构', link: '/standard/dev/structure' },
-        { text: '协作与版本控制', link: '/standard/dev/cooperation-and-version' },
-        { text: '安全性', link: '/standard/dev/safe' },
-        { text: '配置管理', link: '/standard/dev/configuration ' }
+        { text: '工程扩展', link: '/standard/dev/expansion' },
+        { text: '协同开发', link: '/standard/dev/cooperation' },
+        { 
+          text: '配置管理',
+          collapsed: true,
+          items: [
+            { text: '用户权限', link: '/standard/dev/configuration/permission' },
+            { text: '应用配置', link: '/standard/dev/configuration/application' },
+          ],
+        },
+        
       ]
     },
     {
       text: '运维',
-      link: '/standard/operation/index'
+      items: [
+        { text: '系统维护', link: '/standard/operation/system' },
+        { text: '数据治理', link: '/standard/operation/data' },
+        { text: '服务配置', link: '/standard/operation/service' },
+      ],
     },
-    {
-      text: '团队建设',
-      link: '/standard/team/index'
-    },
-    { text: '其他', link: '/standard/other' },
+    // {
+    //   text: '团队建设',
+    //   link: '/standard/team/index'
+    // },
+    { text: '常见问题', link: '/standard/question' },
   ],
   '/solution/': [
     { text: '简介', link: '/solution/index' },

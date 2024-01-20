@@ -32,9 +32,11 @@
 - 如果命名单元格，建议使用名词词组体现属性。
 
 ::: details 示例
-- 服务端命令：GetUserInfo / UpdateUserInfo / DeleteUser / AddUser
-- 单元格： userIdCell / userInfoTable
-- 变量：userInfoArray / productIds
-:::
+
+- 服务端命令：`GetUserInfo` / `UpdateUserInfo` / `DeleteUser` / `AddUser`
+- 单元格： `userIdCell` / `userInfoTable`
+- 变量：`userInfoArray` / `productIds`
 
 :::
+
+【<font color="#1677FF">推荐</font>】参数大小写统一，活字格中没有严格的参数校验，所以很容易造成参数名称或者大小写不匹配的情况发生。
