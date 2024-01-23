@@ -6,7 +6,7 @@
 
 ::: info 📘 说明
 
-数据库的任何修改都应当谨慎对待，充分考虑改变对于现有逻辑的影响。更多请查阅[数据库](/standard/database/domain)
+数据库的任何修改都应当谨慎对待，充分考虑改变对于现有逻辑的影响。更多请查阅[数据库](/standard/dev/database/selection)
 
 :::
 

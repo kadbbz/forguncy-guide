@@ -98,6 +98,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '系统架构', link: '/standard/arch/sys-arch' },
         { text: '生命周期', link: '/standard/arch/life-cycle' },
         { text: '部署方案', link: '/standard/arch/deployment' },
+        { text: '可用性', link: '/standard/arch/robustness' },
       ]
     },
     {
@@ -116,7 +117,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
                 { text: '总览', link: '/standard/design/layout/' },
                 { text: '画布标定', link: '/standard/design/layout/canvas' },
                 { text: '适配方案', link: '/standard/design/layout/adapt' },
-                { text: '网格单位', link: '/standard/design/layout/grip' },
+                { text: '网格单位', link: '/standard/design/layout/grid' },
                 { text: '常用模度', link: '/standard/design/layout/modulus' },
               ]
             },
@@ -156,7 +157,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
           collapsed: true,
           items: [
             { text: '类型选择', link: '/standard/dev/database/selection' },
-            { text: '模型设计', link: '/standard/dev/database/model' },
+            { text: '模型设计', link: '/standard/dev/database/domain' },
             { text: '数据检索', link: '/standard/dev/database/retrieval' }
           ],
         },
@@ -194,7 +195,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
 
 /* 网站配置 */
 export default defineConfig({
-
+  
   base: baseUrl,
   title: siteTitle,
   description: siteDescription,
@@ -222,6 +223,10 @@ export default defineConfig({
   themeConfig: {
     i18nRouting: false,
     logo: '/favicon.svg',
+    search: {
+      provider: 'local',
+    },
+    
     /* 当前页右侧导航目录 */
     outline: {
       level: 'deep',
