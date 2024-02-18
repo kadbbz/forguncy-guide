@@ -21,7 +21,7 @@
 ::: danger ⚠️ 反例
 
 服务端命令 `getUserTokenByUsername()` 已经描述得非常清晰，注释无意义。
-![注释反例](/standard/images/dev-base-docs-annotate.png "注释反例")
+![注释反例](../../images/dev-base-docs-annotate.png "注释反例")
 
 :::
 

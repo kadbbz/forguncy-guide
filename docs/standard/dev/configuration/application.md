@@ -3,7 +3,7 @@
 ## 全局
 
 【<font color="#1677FF">推荐</font>】如果您的应用是为公网应用开发的，请务必勾选如图的安全配置：
-![安全配置](/standard/images/dev-configuration-designer-safe.png "安全配置")
+![安全配置](../../images/dev-configuration-designer-safe.png "安全配置")
 
 
 ## 数据

@@ -38,7 +38,7 @@
 
 灵活使用母版功能，可以有效共享页面设计中的公共部分。
 
-【<font color="#1677FF">推荐</font>】[画布标定](/standard/design/layout/canvas)应当在「母版页」中完成。
+【<font color="#1677FF">推荐</font>】[画布标定](../../design/layout/canvas)应当在「母版页」中完成。
 为确保滚动条的唯一性，请确保业务页面的画布大小处于「母版页」范围内。
 
 ::: info 📘 滚动条的唯一性

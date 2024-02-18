@@ -49,4 +49,4 @@
 
 :::
 
-【<font color="#1677FF">推荐</font>】字体颜色的设定标准，建议遵循[主题色](/standard/design/theme)的设计理念。
+【<font color="#1677FF">推荐</font>】字体颜色的设定标准，建议遵循[主题色](../design/theme)的设计理念。

@@ -6,11 +6,11 @@
 ## 纵向间距
 
 【<font color="#1677FF">推荐</font>】通过「小号间距」、「中号间距」、「大号间距」这三种规格来划分信息层次结构。
-![纵向间距示例](/standard/images/design-model-distance-vertical.png "纵向间距示例")
+![纵向间距示例](../../images/design-model-distance-vertical.png "纵向间距示例")
 
 【<font color="#1677FF">推荐</font>】在特定的场景下，您可以通过加减「基础间距」的倍数，或者增加元素来拉开信息层次。
 
 ## 横向间距
 
 【<font color="#1677FF">推荐</font>】为了适应不同尺寸的PC屏幕，在纵向间距的间距结构基础上，需配合「行列高」中的「范围模式」与「自适应」，模拟栅格布局来排布页面元素。
-![横向间距示例](/standard/images/design-model-distance-horizontal.png "横向间距示例")
+![横向间距示例](../../images/design-model-distance-horizontal.png "横向间距示例")

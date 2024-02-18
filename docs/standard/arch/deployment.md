@@ -12,13 +12,13 @@
 
 【<font color="#1677FF">推荐</font>】如果您的应用规模术属于中小型，且没有精力投入在服务环境的搭建与运维上，那么活字格云是您最省心的选择。使用活字格云可以有效减轻运维负担和总体成本，提升系统的安全性和可用性。
 
-::: details 说明
+::: info 说明
 活字格云是官方提供的PaaS云平台，由以下角色构成：
 - 服务器管理器：活字格官方运维的容器，独占资源，安装有活字格服务管理器程序；
 - 文件存储：活字格官方运维的高可用文件服务；
 - 数据库：标准的MySQL、SQL Server服务，独占资源，可选高可用服务。
 
-![活字格云架构](/standard/images/arch-deployment-cloud.png "活字格云架构")
+![活字格云架构](../images/arch-deployment-cloud.png "活字格云架构")
 
 在实际使用中，活字格云具备以下能力，帮助您构建安全可靠的系统运行环境。
 - 连接：允许通过互联网（外网）访问该系统。
@@ -31,7 +31,7 @@
 【<font color="#1677FF">推荐</font>】如果您希望对机器持有完整的控制权，推荐采用私有化部署方式。
 
 ::: details 架构说明
-![私有化部署架构](/standard/images/arch-deployment-private.png "私有化部署架构")
+![私有化部署架构](../images/arch-deployment-private.png "私有化部署架构")
 
 根据预算和项目需求，生产环境的部署方案有单机、标准和集群3种；运维和开发环境也可以进行裁剪和调整。
 
@@ -47,7 +47,7 @@
 顾名思义，就是将活字格服务管理器和数据库部署在同一台机器上。这是成本最低的部署模式，在性能和可用性上需要作出妥协。通常用于项目前期演示或技术验证，不推荐用于生产环境。
 
 ::: details 架构说明
-![单机部署架构](/standard/images/arch-deployment-single.png "单机部署架构")
+![单机部署架构](../images/arch-deployment-single.png "单机部署架构")
 :::
 
 【<font color="#1677FF">推荐</font>】除非并发请求数量极低，否则不推荐使用内置库。
@@ -63,7 +63,7 @@
 ::: details 架构说明
 为了提升性能，我们推荐您将数据库从活字格服务管理器所在的机器上独立出来。这种做法需要用到 2 台服务器（应用/网关服务器 + 数据库服务器），虽然每台服务器的配置较单机部署更低，但总成本会稍高一些。
 
-![标准部署架构](/standard/images/arch-deployment-standard.png "标准部署架构")
+![标准部署架构](../images/arch-deployment-standard.png "标准部署架构")
 :::
 
 【<font color="#1677FF">推荐</font>】多数场景下，Linux 的安全性风险更低，推荐采用活字格官方支持的发行版本。
@@ -89,13 +89,13 @@
 ::: details 在局域网中构建集群（反向代理模式）
 以 nginx 为代表的成熟的反向代理服务器（Layer 7 软件负载均衡）在性能和可靠性方面与传统的Layer 4 端口转发器差异不大，成本低很多。详细的搭建文档参见：[活字格智能集群搭建方案（私有化方案）](https://gcdn.grapecity.com.cn/showtopic-152640-1-1.html)。
 
-![集群部署架构](/standard/images/arch-deployment-cluster-1.png "集群部署架构")
+![集群部署架构](../images/arch-deployment-cluster-1.png "集群部署架构")
 :::
 
 ::: details 利用云服务商提供的基础设施（端口转发模式）
 详细的搭建文档参见：[活字格@AWS智能集群的架构与搭建方案](https://gcdn.grapecity.com.cn/showtopic-152955-1-1.html)。
 
-![集群部署架构](/standard/images/arch-deployment-cluster-2.png "集群部署架构")
+![集群部署架构](../images/arch-deployment-cluster-2.png "集群部署架构")
 
 ::: info 说明
 本方案采用了葡萄城生态合作伙伴亚马逊中国提供的 Layer 4 负载均衡和其他服务，如需在其他云服务商中寻找替代方案，请咨询云服务商的技术支持人员。
