@@ -246,10 +246,10 @@ export default defineConfig({
 
     sidebar,
 
-    editLink: {
-      pattern: `${github}/tree/master/docs/:path`,
-      text: '在 GitHub 上编辑此页'
-    },
+    // editLink: {
+    //   pattern: `${github}/tree/master/docs/:path`,
+    //   text: '在 GitHub 上编辑此页'
+    // },
 
     lastUpdated: {
       text: '最后更新'
