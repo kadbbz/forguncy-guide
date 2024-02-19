@@ -1,5 +1,5 @@
 import { DefaultTheme, defineConfig } from 'vitepress'
-import { baseUrl, github, siteDescription, siteTitle } from './meta.mts'
+import { baseUrl, siteDescription, siteTitle } from './meta.mts'
 
 /* 顶部的导航菜单 */
 const nav : DefaultTheme.Config['nav'] = [
@@ -109,19 +109,9 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '样式',
           collapsed: true,
           items: [
-            { text: '主题色', link: '/standard/design/theme' },
-            { 
-              text: '布局',
-              collapsed: true,
-              items: [
-                { text: '总览', link: '/standard/design/layout/' },
-                { text: '画布标定', link: '/standard/design/layout/canvas' },
-                { text: '适配方案', link: '/standard/design/layout/adapt' },
-                { text: '网格单位', link: '/standard/design/layout/grid' },
-                { text: '常用模度', link: '/standard/design/layout/modulus' },
-              ]
-            },
-            { text: '字体', link: '/standard/design/typeface' },
+            { text: '主题色', link: '/standard/design/style/theme' },
+            { text: '布局', link: '/standard/design/style/layout' },
+            { text: '字体', link: '/standard/design/style/typeface' },
           ]
         },
         { 
