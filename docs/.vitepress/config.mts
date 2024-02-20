@@ -3,25 +3,25 @@ import { baseUrl, siteDescription, siteTitle } from './meta.mts'
 
 /* 顶部的导航菜单 */
 const nav : DefaultTheme.Config['nav'] = [
-  {
-    text: '学习指南',
-    items: [
-      { text: '基础入门', link: '/guide/introduction' },
-      { text: '进阶演练', link: '/guide/advanced/server-command' },
-      { text: '高阶技巧', link: '/guide/higher/component' },
-    ],
-    activeMatch: '^/guide'
-  },
+  // {
+  //   text: '学习指南',
+  //   items: [
+  //     { text: '基础入门', link: '/guide/introduction' },
+  //     { text: '进阶演练', link: '/guide/advanced/server-command' },
+  //     { text: '高阶技巧', link: '/guide/higher/component' },
+  //   ],
+  //   activeMatch: '^/guide'
+  // },
   {
     text: '标准化',
     link: '/standard/introduction',
     activeMatch: '^/standard'
   },
-  {
-    text: '解决方案',
-    link: '/solution/index',
-    activeMatch: '^/solution'
-  },
+  // {
+  //   text: '解决方案',
+  //   link: '/solution/index',
+  //   activeMatch: '^/solution'
+  // },
   {
     text: `关于`,
     items: [
@@ -191,7 +191,7 @@ export default defineConfig({
   description: siteDescription,
   
   head: [
-    ['link', { rel: 'icon',href: '/favicon.svg' }]
+    ['link', { rel: 'icon',href: '/forguncy-icon.png' }]
   ],
   
 
@@ -212,7 +212,7 @@ export default defineConfig({
   /* 主题配置 */
   themeConfig: {
     i18nRouting: false,
-    logo: '/favicon.svg',
+    logo: '/forguncy-icon.png',
     search: {
       provider: 'local',
     },
@@ -245,9 +245,9 @@ export default defineConfig({
       text: '最后更新'
     },
 
-    socialLinks: [
-      {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
-    ],
+    // socialLinks: [
+    //   {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
+    // ],
 
     footer: {
       message: 'Released under the MIT License.',
