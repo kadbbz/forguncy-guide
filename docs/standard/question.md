@@ -3,22 +3,22 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 const members = [
   {
-    avatar: '../public/avatar-gerald.jpeg',
+    avatar: '../avatar-gerald.jpeg',
     name: 'Gerald Zhang',
     title: 'Creator',
   },
 	{
-    avatar: '../public/avatar-eric.png',
+    avatar: '../avatar-eric.png',
     name: 'Eric Liang',
     title: 'Developer',
   },
 	{
-    avatar: '../public/avatar-jack.png',
+    avatar: '../avatar-jack.png',
     name: 'Jack Cheng',
     title: 'Developer',
   },
 	{
-    avatar: '../public/avatar-joseph.png',
+    avatar: '../avatar-joseph.png',
     name: 'Joseph Wang',
     title: 'Developer',
   }
