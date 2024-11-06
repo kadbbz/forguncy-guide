@@ -1,4 +1,4 @@
-# 界面展示
+# 设计原则
 
 用户界面是用户与系统互动的纽带，决定着使用体验的质量。 考虑到活字格官方插件「[PC组件包-ElementPlus](https://marketplace.grapecity.com.cn/ApplicationDetails?productID=SP2203310001&productDetailID=D2312210011&tabName=Tabs_detail)」 的广泛使用，
 我们推荐遵循 UI 框架 [Element Plus](https://element-plus.org/zh-CN/guide/design.html) 的设计原则对活字格应用的风格进行标定， 并基于活字格特点，为其赋予新的含义。
