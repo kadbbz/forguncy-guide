@@ -8,9 +8,11 @@
     "docs:dev": "vitepress dev docs",
     "docs-expose:dev": "vitepress dev docs --host",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "export-pdf": "press-export-pdf export docs/standard"
   },
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.39"
+    "vitepress": "^1.5.0",
+    "vitepress-export-pdf": "^1.0.0-beta.0"
   }
 }

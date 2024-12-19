@@ -1,3 +1,8 @@
+---
+prev: false
+next: false
+---
+
 # 术语说明
 
 ## 文案
