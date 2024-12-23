@@ -17,11 +17,23 @@ const nav : DefaultTheme.Config['nav'] = [
     link: '/standard/introduction',
     activeMatch: '^/standard'
   },
-  // {
-  //   text: '解决方案',
-  //   link: '/solution/index',
-  //   activeMatch: '^/solution'
-  // },
+  {
+    text: '解决方案',
+    items: [
+      {
+        text: '反向代理',
+        link: '/solution/reverse-proxy/index'
+      },
+      {
+        text: '负载均衡',
+        link: '/solution/load-balance/index'
+      },
+      {
+        text: '日志监控',
+        link: '/solution/log-monitor/index'
+      }
+    ]
+  },
   {
     text: `关于`,
     items: [
@@ -178,8 +190,61 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
     // },
     { text: '常见问题', link: '/standard/question' },
   ],
-  '/solution/': [
-    { text: '简介', link: '/solution/index' },
+  '/solution/load-balance/': [
+    { text: '简介', link: "/solution/load-balance/index" },
+    { text: '环境要求', link: "/solution/load-balance/env-base" },
+    
+    { 
+      text: '集群安装',
+      items: [
+        { text: '基础平台', link: '/solution/load-balance/kubernetes'},
+        { text: '文件共享', link: '/solution/load-balance/hzg/file-share' },
+        { text: 'Chart 安装', link: '/solution/load-balance/hzg/install' },
+        { text: '配置设置', link: '/solution/load-balance/hzg/config' },
+        { text: '网关代理', link: '/solution/load-balance/hzg/gateway' },
+        { text: '升级', link: '/solution/load-balance/hzg/upgrade' },
+        { text: '离线安装', link: '/solution/load-balance/hzg/offline' },
+        { text: '可视化', link: '/solution/load-balance/kubernetes/dashboard' },
+      ]
+    },
+    {
+      text: '参考',
+      items: [
+        { text: 'Kubernetes', 
+          items: [
+            { text: 'minikube', link: '/solution/load-balance/kubernetes/minikube'},
+            { text: 'Docker Desktop', link: '/solution/load-balance/kubernetes/docker-desktop'},
+            { 
+              text: '标准安装',
+              link: '/solution/load-balance/kubernetes/manual',
+              collapsed: true,
+              items: [
+                { text: '环境准备', link: '/solution/load-balance/kubernetes/env-init' },
+                { text: '容器运行时', link: '/solution/load-balance/kubernetes/container-running' },
+                { text: 'kubeadm、kubelet 与 kubectl', link: '/solution/load-balance/kubernetes/base-tools' },
+                { text: '初始化控制面板', link: '/solution/load-balance/kubernetes/master-init' },
+                { text: '配置网络插件', link: '/solution/load-balance/kubernetes/cni' },
+                { text: '添加工作节点', link: '/solution/load-balance/kubernetes/node-join' },
+              ]
+            },
+            { text: 'KubeKey', link: '/solution/load-balance/kubernetes/kubekey' },
+          ]
+        },
+        { 
+          text: 'Helm', 
+          link: '/solution/load-balance/hzg/helm'
+        },
+      ]
+    }
+    
+  ],
+  '/solution/reverse-proxy/': [
+    { text: '简介', link: "" },
+    
+  ],
+  '/solution/log-monitor/': [
+    { text: '日志', link: "" },
+    
   ]
 }
 
@@ -200,6 +265,13 @@ export default defineConfig({
 
   /* markdown 配置 */
   markdown: {
+    container: {
+      tipLabel: 'TIP',
+      warningLabel: 'WANNING',
+      dangerLabel: 'DANGER',
+      infoLabel: 'NOTE',
+      detailsLabel: 'DETAILS'
+    },
     lineNumbers: true,
   },
   locales: {
