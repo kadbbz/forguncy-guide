@@ -21,16 +21,16 @@ const nav : DefaultTheme.Config['nav'] = [
     text: '解决方案',
     items: [
       {
-        text: '反向代理',
-        link: '/solution/reverse-proxy/index'
+        text: '负载均衡',
+        link: '/solution/load-balance/introduction'
       },
       {
-        text: '负载均衡',
-        link: '/solution/load-balance/index'
+        text: '反向代理',
+        link: '/solution/reverse-proxy/introduction'
       },
       {
         text: '日志监控',
-        link: '/solution/log-monitor/index'
+        link: '/solution/log-monitor/introduction'
       }
     ]
   },
@@ -190,21 +190,21 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
     // },
     { text: '常见问题', link: '/standard/question' },
   ],
-  '/solution/load-balance/': [
-    { text: '简介', link: "/solution/load-balance/index" },
+  '/solution/load-balance': [
+    { text: '简介', link: "/solution/load-balance/introduction" },
     { text: '环境要求', link: "/solution/load-balance/env-base" },
     
     { 
       text: '集群安装',
       items: [
-        { text: '基础平台', link: '/solution/load-balance/kubernetes'},
-        { text: '文件共享', link: '/solution/load-balance/hzg/file-share' },
-        { text: 'Chart 安装', link: '/solution/load-balance/hzg/install' },
-        { text: '配置设置', link: '/solution/load-balance/hzg/config' },
-        { text: '网关代理', link: '/solution/load-balance/hzg/gateway' },
-        { text: '升级', link: '/solution/load-balance/hzg/upgrade' },
-        { text: '离线安装', link: '/solution/load-balance/hzg/offline' },
-        { text: '可视化', link: '/solution/load-balance/kubernetes/dashboard' },
+        { text: '基础平台', link: '/solution/load-balance/platform'},
+        { text: '文件共享', link: '/solution/load-balance/file-share' },
+        { text: 'Chart 安装', link: '/solution/load-balance/chart-install' },
+        { text: '配置设置', link: '/solution/load-balance/config' },
+        { text: '网关代理', link: '/solution/load-balance/gateway' },
+        { text: '升级', link: '/solution/load-balance/upgrade' },
+        { text: '离线安装', link: '/solution/load-balance/offline' },
+        { text: '可视化', link: '/solution/load-balance/dashboard' },
       ]
     },
     {
@@ -214,6 +214,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
           items: [
             { text: 'minikube', link: '/solution/load-balance/kubernetes/minikube'},
             { text: 'Docker Desktop', link: '/solution/load-balance/kubernetes/docker-desktop'},
+            { text: 'kubectl', link: '/solution/load-balance/kubernetes/kubectl'},
             { 
               text: '标准安装',
               link: '/solution/load-balance/kubernetes/manual',
@@ -232,18 +233,19 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
         },
         { 
           text: 'Helm', 
-          link: '/solution/load-balance/hzg/helm'
+          link: '/solution/load-balance/helm'
         },
+        { text: '镜像加速', link: '/solution/load-balance/mirror'},
       ]
     }
     
   ],
   '/solution/reverse-proxy/': [
-    { text: '简介', link: "" },
+    { text: '简介', link: "/solution/reverse-proxy/introduction" },
     
   ],
   '/solution/log-monitor/': [
-    { text: '日志', link: "" },
+    { text: '简介', link: "/solution/log-monitor/introduction" },
     
   ]
 }
@@ -302,7 +304,7 @@ export default defineConfig({
     
     returnToTopLabel: '返回顶部',
     darkModeSwitchLabel: '外观',
-    sidebarMenuLabel: '归档',
+    sidebarMenuLabel: '目录',
 
     nav,
 

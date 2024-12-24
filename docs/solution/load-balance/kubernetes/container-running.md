@@ -141,7 +141,7 @@ vim /etc/containerd/config.toml
     > 在 containerd 的最新几个版本中，已经默认为 systemd。如果您不确定的话，可以手动添加该属性。需要留意其所在的层级。
 
     - `config_path`：配置镜像加速地址（可选）。
-      containerd 默认从 docker.io 进行镜像的拉取。如果您的网络访问 docker.io 不便，需要手动配置您自己的[镜像加速地址](./mirror.md)。
+      containerd 默认从 docker.io 进行镜像的拉取。如果您的网络访问 docker.io 不便，需要手动配置您自己的镜像加速地址：{#containerd-registry}
 
     ```bash{2}
     [plugins."io.containerd.grpc.v1.cri".registry]
@@ -152,7 +152,7 @@ vim /etc/containerd/config.toml
     >
     > 配置项 `/etc/containerd/certs.d` 是手动在 `/etc/containerd` 目录下创建的目录。此规则是 containerd 提供的自定义镜像源方式：即在配置文件的目录下自定义 registry server 目录。`certs.d` 中存放的都是需要代理的仓库源，每个源一个路径，具体的配置保存在 `hosts.toml` 中。更多说明请参考[官方文档](https://github.com/containerd/containerd/blob/main/docs/hosts.md)。
     >
-    > 这里直接使用 `_default` 配置默认镜像加速，镜像加速为[私有化仓库](./registry.md) Harbor，您可以变更为您自己的加速地址。示例如下：
+    > 这里直接使用 `_default` 配置默认镜像加速，镜像加速为私有化仓库 [Harbor](../offline#harbor) ，您可以变更为您自己的加速地址。示例如下：
     >
     > ```bash
     >  # 创建默认加速目录

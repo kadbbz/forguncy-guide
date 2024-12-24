@@ -12,16 +12,16 @@ kubectl 是使用 Kubernetes API 与 Kubernetes 集群的控制面板进行通�
 
 ::: code-group
 
-```bash [Debian/Ubuntu]
-sudo apt-get install -y kubectl
-```
-
 ```bash [Red Hat/CentOS]
 sudo yum install -y kubectl
 ```
 
+```bash [Debian/Ubuntu]
+sudo apt-get install -y kubectl
+```
+
 ```bash [MacOS]
-choco install kubernetes-cli
+brew install kubernetes-cli
 ```
 
 :::

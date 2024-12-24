@@ -1,12 +1,3 @@
----
-prev:
-    text: "环境要求"
-    link: "/solution/load-balance/env-base"
-next:
-    text: "活字格集群"
-    link: "/solution/load-balance/hzg/index"
----
-
 # 基础平台
 
 活字格集群在负载均衡的方案选择上，仍遵循主流开发的标准实践，所依赖的基础平台为 [Kubernetes](https://kubernetes.io/zh-cn/)。
@@ -20,8 +11,8 @@ next:
 
 现在存在许多为学习者订制的 Kubernetes 学习环境，其中
 
--   [minikube](./minikube)
--   [Docker Desktop](./docker-desktop)
+-   [minikube](./kubernetes/minikube)
+-   [Docker Desktop](./kubernetes/docker-desktop)
 
 以其简单易用的特点成为最受欢迎的两个选择。这两个平台都支持单节点下运行 Kubernetes 环境，并提供与生产环境一致的 Kubernetes 功能，适合学习与调试功能。
 
@@ -39,14 +30,14 @@ next:
 
 在生产环境中，可以选择以下安装方式：
 
--   [标准安装](./manual)
+-   [标准安装](./kubernetes/manual)
 
     遵照官方文档标准流程执行安装操作。流程可控，灵活性高，但操作流程复杂。
 
--   [KubeKey](./kubekey)
+-   [KubeKey](./kubernetes/kubekey)
 
     借助第三方工具 KubeKey 进行自动化安装。安装流程简单，但安装版本会有延后。
 
 ## 直接开始
 
-如果您已经拥有了自己的 Kubernetes 环境，可以直接进入[活字格集群](../hzg/index)的学习。
+如果您已经拥有了自己的 Kubernetes 环境，请开启下一章的学习。
