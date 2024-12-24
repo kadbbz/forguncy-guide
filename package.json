@@ -1,18 +1,21 @@
 {
-  "name": "forguncy-guide",
-  "version": "0.1.0",
-  "description": "活字格的全栈式学习文档",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs-expose:dev": "vitepress dev docs --host",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
-    "export-pdf": "press-export-pdf export docs/standard"
-  },
-  "devDependencies": {
-    "vitepress": "^1.5.0",
-    "vitepress-export-pdf": "^1.0.0"
-  }
+    "name": "forguncy-guide",
+    "version": "0.1.0",
+    "description": "活字格的全栈式学习文档",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "docs:dev": "vitepress dev docs",
+        "docs-expose:dev": "vitepress dev docs --host",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs",
+        "docs:export": "press-export-pdf export docs"
+    },
+    "devDependencies": {
+        "vitepress": "^1.5.0",
+        "vitepress-export-pdf": "1.0.0"
+    },
+    "dependencies": {
+        "multimatch": "^7.0.0"
+    }
 }
