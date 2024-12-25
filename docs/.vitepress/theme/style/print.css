@@ -5,3 +5,16 @@
     display: none !important;
   }
 }
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(180deg, #bd34fe, #41d1ff);
+
+  /* hero logo背景渐变色
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #f1fe34 70%,
+    #47caff 20%
+  );
+  --vp-home-hero-image-filter: blur(140px); */
+}

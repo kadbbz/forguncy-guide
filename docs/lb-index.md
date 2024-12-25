@@ -13,8 +13,8 @@ hero:
           link: /solution/load-balance/introduction
         - theme: alt
           text: 联系专家 🧑‍💻
-          link: "https://affim.baidu.com/unique_40629805/chat?siteId=18064822&userId=40629805&siteToken=017307e30728fbca74b59b122906b279"
+          link: "https://www.grapecity.com.cn/solutions/huozige/applyonline"
     image:
-        src: /lb-log.png
+        src: /lb-logo.png
         alt: 活字格集群
 ---
