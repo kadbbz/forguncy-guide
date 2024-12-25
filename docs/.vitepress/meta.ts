@@ -1,7 +1,7 @@
 import {version} from '../../package.json'
 
 // base info
-export const baseUrl = '/repo/'
+export const baseUrl = '/forguncy-guide/'
 export const siteTitle = '格言格语'
 export const siteLogo = ''
 export const siteKeywords = '低代码,活字格,forguncy,葡萄城,grapecity'
