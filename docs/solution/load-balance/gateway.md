@@ -96,7 +96,7 @@ http {
 -   对管理控制台和活字格应用配置反向代理。
 
 > [!TIP] 不熟悉该配置文件？
-> 您可以参阅[这里](/solution/reverse-proxy/introduction.md)学习 Nginx 的使用场景以及反向代理的具体说明
+> 您可以参阅[这里](/solution/gateway/introduction)学习 Nginx 的使用场景以及反向代理的具体说明
 
 ## Ingress
 

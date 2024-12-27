@@ -111,7 +111,7 @@ service/fgc-server-redis-service      NodePort   192.168.194.219   <none>       
 service/fgc-server-influx-service     NodePort   192.168.194.245   <none>        22348:30133/TCP   9h
 ```
 
-当集群中所有 Pod 的状态都为 `Running` 且 Ready 均符合当前的标准数，此时安装顺利完成。现在您可以访问 `fgc-server-forguncy-service` 对外暴露的 `31291` 端口访问活字格服务了。
+当集群中所有 Pod 的状态都为 `Running` 且 Ready 均符合当前的标准数，此时安装顺利完成。现在您可以访问 `fgc-server-forguncy-service` 对外暴露的 `31291` 端口访问活字格服务了。{#expose_service}
 
 > [!NOTE]对外服务端口
 > 除非您在 chart 中的 service 配置中明确指定端口，否则 `fgc-server-forguncy-service` 对外暴露的端口是随机的。
