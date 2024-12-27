@@ -2,7 +2,7 @@
 
 本节介绍活字格在集群下的安装。
 
-> [!TIP] 还没有安装 Helm ？
+> [!TIP]
 > 活字格的集群安装依赖于包管理器 Helm，如果您还未安装，可以参阅[这里](./helm)进行 Helm 的安装工作。
 
 ## 活字格 chart
@@ -26,7 +26,7 @@
 
 ```
 
-> [!TIP] chart 目录
+> [!TIP]
 > chart 是 Kubernetes 应用所需要的全部资源定义，因此其本质是全部配置文件的整合。活字格集群所需要的全部资源都被定义在当前目录下的多个文件中。关于 chart 目录以及更详细的说明，可参阅 Helm [官方文档](https://helm.sh/zh/docs/topics/charts/)
 
 ### 标准配置
@@ -56,7 +56,7 @@ persistentVolume:
         server: "<your-nfs-server>"
 ```
 
-> [!IMPORTANT] 路径映射请留意！
+> [!IMPORTANT]
 >
 > -   `values.yaml` 文件中的五个 `path` 字段，请配置为您在集群节点上挂载共享目录中对应的路径。
 > -   请确保与 nfs 服务器通信正常。
@@ -71,7 +71,7 @@ persistentVolume:
     -   如果您希望调整集群中存储卷的配置，请修改 `pv*.yaml`相关的配置文件。
     -   如果您希望调整活字格服务访问相关的配置，请修改 `service*.yaml`相关的配置文件。
 
-> [!NOTE] 配置规则
+> [!NOTE]
 > chart 的配置规则完全遵循 Kubernetes 的资源描述。因此配置方式您可以参阅 kubernetes [官方文档](https://kubernetes.io/zh-cn/docs/concepts/)。
 
 ## 安装
@@ -84,7 +84,7 @@ helm install fgc-server <chartname>.tgz -n fgc-system --create-namespace
 
 -   `fgc-server`：release 名称，可自定义。
 -   `<chartname>.tgz`：chart 名称。配置文件打包后的产物。当然，您也可以传入 chart 文件所在的路径，如当前目录 `.`。
-    > [!TIP] 如何打包？
+    > [!TIP]
     > 进入包含 chart 的目录，并运行以下命令：
     >
     > ```bash
@@ -113,7 +113,7 @@ service/fgc-server-influx-service     NodePort   192.168.194.245   <none>       
 
 当集群中所有 Pod 的状态都为 `Running` 且 Ready 均符合当前的标准数，此时安装顺利完成。现在您可以访问 `fgc-server-forguncy-service` 对外暴露的 `31291` 端口访问活字格服务了。{#expose_service}
 
-> [!NOTE]对外服务端口
+> [!NOTE]
 > 除非您在 chart 中的 service 配置中明确指定端口，否则 `fgc-server-forguncy-service` 对外暴露的端口是随机的。
 
 ### 集群初始化失败

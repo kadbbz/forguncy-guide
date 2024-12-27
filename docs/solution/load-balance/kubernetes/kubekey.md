@@ -2,7 +2,7 @@
 
 本节介绍使用第三方工具：由 [KubeSphere](../dashboard#kubesphere) 提供的脚手架 KubeKey 进行 Kubernetes 集群的安装。
 
-> [!IMPORTANT]需要留意
+> [!IMPORTANT]
 > 从标准化与流程化出发，当前 KubeKey 支持一键安装的 Kubernetes 版本号仅支持到 V1.28.0，且对于安装机器的要求版本也较低。如果您希望安装更新版本的 Kubernetes，请选择[标准安装](./manual)的方式。
 
 您可以使用任何节点作为任务机来执行安装任务，也可以在安装之前或之后根据需要新增节点（例如，为了实现高可用性）。

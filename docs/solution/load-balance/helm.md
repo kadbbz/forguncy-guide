@@ -6,13 +6,13 @@ Helm 使用一种称为 `Chart` 的打包格式来描述应用的 Kubernetes 资
 
 ## 安装
 
-> [!IMPORTANT] 先决条件
+> [!IMPORTANT]
 > 想成功和正确地使用 Helm，需要以下前置条件：
 >
 > -   一个 Kubernetes 集群
 > -   本地的 `kubectl`
 
-> [!TIP] 安装在哪里？
+> [!TIP]
 > 为了更为便捷的管理 Kubernetes 中的应用，建议将 Helm 安装在控制平面所在的节点上。
 
 Helm 项目提供了两种获取和安装 Helm 的方式。这是官方提供的获取 Helm 发布版本的方法。另外，Helm 社区提供了通过不同包管理器安装 Helm 的方法。

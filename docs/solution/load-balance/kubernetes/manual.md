@@ -1,11 +1,11 @@
 # 标准安装
 
-> [!TIP] 我对 Kubernetes 并不熟悉
+> [!TIP]
 > 本教程为安装 Kubernetes 集群的标准流程。遵循本流程可以顺利引导构建属于您的 Kubernetes 集群，无需对 Kubernetes 有太多的接触。
 >
 > 当然，如果您在安装过程中遇到错误，请检查您的操作是否与教程保持一致，并确保您的基础环境和教程相同。或者您对您的环境有准确的把握。
 
-> [!NOTE] 安装流程说明
+> [!NOTE]
 > 本教程的安装流程遵循官方说明，您可跳转至[官网文档](https://kubernetes.io/zh-cn/docs/setup/production-environment/)做更多了解。
 
 ## 示例环境
@@ -17,7 +17,8 @@
 | nfs-server | 192.168.1.6 | 文件共享节点，通过 NFS 提供文件共享服务                |
 | es-server  | 192.168.1.7 | ElasticSearch 节点，运行日志监控采集分析服务           |
 
-> [!INFO] 系统信息
+> [!INFO]
+> 节点的操作系统信息
 >
 > ```text
 >  Distributor ID: Ubuntu

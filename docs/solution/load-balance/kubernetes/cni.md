@@ -2,8 +2,8 @@
 
 本节介绍为您的 Kubernetes 集群配置容器网络接口（CNI）。
 
-> [!TIP] 🎯 目标节点
-> 本节操作面向控制平面节点。
+> [!TIP]
+> 🎯 本节操作面向控制平面节点。
 
 ## CNI
 
@@ -17,7 +17,7 @@ CNI (Container Network Interface) 是 Kubernetes 网络的重要组成部分。�
 
 本节教程介绍的是 Calico 的安装。
 
-> [!IMPORTANT] 务必留意
+> [!IMPORTANT]
 > 您必须部署一个基于 Pod 网络插件的容器网络接口（CNI）， 以便集群中的 Pod 可以相互通信。在安装网络之前，集群 DNS (CoreDNS) 将不会启动。
 
 ## Calico
@@ -34,7 +34,7 @@ Calico 在新版更新后，已经弃用直接通过配置文件的方式初始�
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/tigera-operator.yaml
 ```
 
-> [!TIP] 命令失败？
+> [!TIP]
 > 上述命令是直接调用官方线上的配置文件进行安装。如果无法访问线上的配置地址，可访问该[地址](https://docs.projectcalico.org/manifests/tigera-operator.yaml)，将其配置内容保存至您的设备上的 `yaml` 文件。
 
 ### 自定义配置
@@ -45,8 +45,8 @@ kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.29.1
 wget https://raw.githubusercontent.com/projectcalico/calico/v3.29.1/manifests/custom-resources.yaml
 ```
 
-> [!TIP] 命令失败？
-> 可切换成如下命令进行下载：
+> [!TIP]
+> 如果命令失败，可切换成如下命令进行下载：
 >
 > ```bash
 > curl https://projectcalico.docs.tigera.io/manifests/custom-resources.yaml -O

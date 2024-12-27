@@ -2,8 +2,8 @@
 
 本节介绍集群节点的基础环境准备工作操作。
 
-> [!TIP] 🎯 目标节点
-> 所有操作面向集群所有节点
+> [!TIP]
+> 🎯 所有操作面向集群所有节点
 
 ## 设置主机名
 
@@ -61,7 +61,7 @@ sudo systemctl disable ufw
 sudo systemctl status ufw
 ```
 
-> [!TIP] 建议
+> [!TIP]
 > 如后期需要开启防火墙，请在安装成功后开启，并公开相应的端口
 
 ## 永久关闭 selinux

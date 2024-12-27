@@ -91,7 +91,7 @@ KubeSphere 安装同样很简单，直接使用 Helm 安装即可：
 helm upgrade --install -n kubesphere-system --create-namespace ks-core https://charts.kubesphere.io/main/ks-core-1.1.3.tgz --debug --wait
 ```
 
-> [!NOTE]访问 Docker Hub 受限
+> [!NOTE]
 > KubeSphere 提供了官方的国内镜像源，您只需要在安装命令后添加如下配置，便可修改默认的镜像拉取地址。
 >
 > ```bash

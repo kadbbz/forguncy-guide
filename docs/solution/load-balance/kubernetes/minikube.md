@@ -2,7 +2,8 @@
 
 [minikube](https://minikube.sigs.k8s.io/docs/) 可在 macOS、Linux 和 Windows 上快速设置本地 Kubernetes 集群，专注于简化 Kubernetes 的学习和开发。
 
-> [!NOTE] 您需要什么
+> [!NOTE]
+> 您需要什么？
 >
 > -   2 个或更多 CPU
 > -   2GB 空闲内存
@@ -16,7 +17,7 @@
 
 ![minikube 安装命令配置](../../images/minikube-installation.png)
 
-> [!TIP] 镜像无法下载？
+> [!TIP]
 > 由于网络原因，可能会存在镜像拉取失败的情况。此时我们可以选择使用[镜像加速](../mirror)来解决该问题。
 
 ## 启动集群
