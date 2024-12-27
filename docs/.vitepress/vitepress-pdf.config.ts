@@ -73,7 +73,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 </div>`
 
 export default defineUserConfig({
-  outFile: 'forguncy-guide.pdf',
+  outFile: '格言格语-网关方案.pdf',
   outDir: 'output-pdf',
   pdfOptions: {
     format: 'A4',
@@ -101,6 +101,7 @@ export default defineUserConfig({
   routePatterns: [
     '**',
     '!/forguncy-guide/index',
+    '!/forguncy-guide/lb-index',
     '!/forguncy-guide/guide/**',
     '!/forguncy-guide/standard/**',
     '!/forguncy-guide/solution/load-balance/**',
