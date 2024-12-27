@@ -22,47 +22,16 @@ function extractLinksFromConfig(config: DefaultTheme.Config) {
 }
 
 const links = extractLinksFromConfig(userConfig.themeConfig!)
-const lbRouteOrder = [
-  '/lb-index',
-  '/solution/load-balance/introduction',
-  '/solution/load-balance/env-base',
-  '/solution/load-balance/platform',
-  '/solution/load-balance/file-share',
-  '/solution/load-balance/chart-install',
-  '/solution/load-balance/config',
-  '/solution/load-balance/upgrade',
-  '/solution/load-balance/gateway',
-  '/solution/load-balance/offline',
-  '/solution/load-balance/dashboard',
-  '/solution/load-balance/kubernetes/minikube',
-  '/solution/load-balance/kubernetes/docker-desktop',
-  '/solution/load-balance/kubernetes/kubectl',
-  '/solution/load-balance/kubernetes/manual',
-  '/solution/load-balance/kubernetes/env-init',
-  '/solution/load-balance/kubernetes/container-running',
-  '/solution/load-balance/kubernetes/base-tools',
-  '/solution/load-balance/kubernetes/master-init',
-  '/solution/load-balance/kubernetes/cni',
-  '/solution/load-balance/kubernetes/node-join',
-  '/solution/load-balance/kubernetes/kubekey',
-  '/solution/load-balance/helm',
-  '/solution/load-balance/mirror',
-]
 
-const gatewayRouteOrder = [
-  '/gateway-index',
-  '/solution/gateway/introduction',
-  '/solution/gateway/web-server',
-  '/solution/gateway/reverse-proxy',
-  '/solution/gateway/load-balance',
-  '/solution/gateway/redirect',
-  '/solution/gateway/defend-link',
-  '/solution/gateway/https',
-  '/solution/gateway/ssl-cert',
-  '/solution/gateway/cross-domain',
-]
+const targetExportPath = ['/solution/gateway']
 
+function filterRoutesByPaths(routes: string[], paths: string[]): string[] {
+  return routes.filter(route =>
+    paths.some(path => route.startsWith(path))
+  );
+}
 
+const exportPaths = filterRoutesByPaths(links, targetExportPath)
 
 const headerTemplate = `<div style="margin-top: -0.4cm; height: 70%; width: 100%; display: flex; justify-content: center; align-items: center; color: lightgray; border-bottom: solid lightgray 1px; font-size: 10px;">
   <span class="title"></span>
@@ -73,7 +42,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 </div>`
 
 export default defineUserConfig({
-  outFile: 'forguncy-guide.pdf',
+  outFile: '格言格语-网关方案.pdf',
   outDir: 'output-pdf',
   pdfOptions: {
     format: 'A4',
@@ -88,19 +57,22 @@ export default defineUserConfig({
       top: 60,
     },
   },
-  urlOrigin: 'https://forguncyse.github.io/',
+  urlOrigin: 'https://forguncyse.github.io',
   sorter: (pageA, pageB) => {
-    //  负载均衡目录
-    // const aIndex = lbRouteOrder.findIndex(route => route === pageA.path)
-    // const bIndex = lbRouteOrder.findIndex(route => route === pageB.path)
-    // 网关目录
-    const aIndex = gatewayRouteOrder.findIndex(route => route === pageA.path)
-    const bIndex = gatewayRouteOrder.findIndex(route => route === pageB.path)
+    const aIndex = exportPaths.findIndex(route => { 
+      const path = route.endsWith('.html') ? route.slice(0, -5) : route
+      return path === pageA.path
+    })
+    const bIndex = exportPaths.findIndex(route => { 
+      const path = route.endsWith('.html') ? route.slice(0, -5) : route
+      return path === pageB.path
+    })
     return aIndex - bIndex
   },
   routePatterns: [
     '**',
     '!/forguncy-guide/index',
+    '!/forguncy-guide/lb-index',
     '!/forguncy-guide/guide/**',
     '!/forguncy-guide/standard/**',
     '!/forguncy-guide/solution/load-balance/**',
