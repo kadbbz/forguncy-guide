@@ -22,7 +22,7 @@ function extractLinksFromConfig(config: DefaultTheme.Config) {
 }
 
 const links = extractLinksFromConfig(userConfig.themeConfig!)
-const routeOrder = [
+const lbRouteOrder = [
   '/lb-index',
   '/solution/load-balance/introduction',
   '/solution/load-balance/env-base',
@@ -47,6 +47,19 @@ const routeOrder = [
   '/solution/load-balance/kubernetes/kubekey',
   '/solution/load-balance/helm',
   '/solution/load-balance/mirror',
+]
+
+const gatewayRouteOrder = [
+  '/gateway-index',
+  '/solution/gateway/introduction',
+  '/solution/gateway/web-server',
+  '/solution/gateway/reverse-proxy',
+  '/solution/gateway/load-balance',
+  '/solution/gateway/redirect',
+  '/solution/gateway/defend-link',
+  '/solution/gateway/https',
+  '/solution/gateway/ssl-cert',
+  '/solution/gateway/cross-domain',
 ]
 
 
@@ -75,20 +88,24 @@ export default defineUserConfig({
       top: 60,
     },
   },
-  urlOrigin: 'https://fgclibrary.cn',
+  urlOrigin: 'https://forguncyse.github.io/',
   sorter: (pageA, pageB) => {
-    
-    const aIndex = routeOrder.findIndex(route => route === pageA.path)
-    const bIndex = routeOrder.findIndex(route => route === pageB.path)
+    //  负载均衡目录
+    // const aIndex = lbRouteOrder.findIndex(route => route === pageA.path)
+    // const bIndex = lbRouteOrder.findIndex(route => route === pageB.path)
+    // 网关目录
+    const aIndex = gatewayRouteOrder.findIndex(route => route === pageA.path)
+    const bIndex = gatewayRouteOrder.findIndex(route => route === pageB.path)
     return aIndex - bIndex
   },
   routePatterns: [
     '**',
-    '!/index',
-    '!/guide/**',
-    '!/standard/**',
-    '!/solution/reverse-proxy/**',
-    '!/solution/log-monitor/**',
+    '!/forguncy-guide/index',
+    '!/forguncy-guide/guide/**',
+    '!/forguncy-guide/standard/**',
+    '!/forguncy-guide/solution/load-balance/**',
+    // '!/forguncy-guide/solution/gateway/**',
+    '!/forguncy-guide/solution/log-monitor/**',
     '!/404.html'
   ]
 });
