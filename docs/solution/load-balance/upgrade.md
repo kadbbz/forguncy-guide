@@ -13,7 +13,7 @@ kubectl delete pod <forguncy-pod-name> -n <fgc-namespace>
 -   `<forguncy-pod-name>`：活字格 pod 名称。
 -   `<fgc-namespace>`：活字格服务的命名空间
 
-> [!IMPORTANT] 容器拉取策略
+> [!IMPORTANT]
 > 为了确保避免镜像自动升级版本导致应用出现问题，请在 deployment 中配置镜像拉取策略为 `IfNotPresent`。这样只有当我们手动更新镜像后，才会有升级的行为。
 
 尽管直接升级简单直接，但是为了更好的版本管理与维护，建议通过 Helm 执行升级。
@@ -30,7 +30,7 @@ release 版本是增量修订。每次安装，升级或回滚时，修订版本
 helm upgrade -f values.yaml f fgc-server .
 ```
 
-> [!NOTE] 跳过打包操作
+> [!NOTE]
 > 示例中的操作没有执行 `package`，直接在 `values.yaml` 所在的当前的目录直接操作。因此传入的是当前路径 `.`
 
 ![升级后节点的变化](../images/upgrade-watch.png)

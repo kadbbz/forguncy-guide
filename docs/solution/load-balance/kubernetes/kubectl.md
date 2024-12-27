@@ -61,8 +61,7 @@ kubectl config get-contexts
 kubectl config use-context docker-desktop
 ```
 
-> [!TIP] 便捷工具
-> [kubectx](https://github.com/ahmetb/kubectx) 是一个用于在 kubectl 中更快地在不同上下文（集群）之间切换的工具。
+> [!TIP] > [kubectx](https://github.com/ahmetb/kubectx) 是一个用于在 kubectl 中更快地在不同上下文（集群）之间切换的工具。
 >
 > 其效果等价于 `kubectl config use-context`
 
@@ -70,7 +69,7 @@ kubectl config use-context docker-desktop
 
 常用命令可参考如下示例，更多详情请参考官网：[命令行工具 (kubectl)](https://kubernetes.io/zh-cn/docs/reference/kubectl/)
 
-> [!INFO] 留意
+> [!NOTE]
 > 在使用命令时需留意当前所在的命名空间。否则 kubectl 默认只获取 default 命名空间下的资源
 
 -   查看集群节点

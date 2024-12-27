@@ -28,7 +28,7 @@
 #### 前提条件
 
 -   `Docker`：Harbor 服务对于 docker 是强依赖，因此您需要在镜像仓库节点上优先安装 docker 服务。安装方式可参考[文档](https://docs.docker.com/engine/)。
-    > [!NOTE] 无法安装 Docker Desktop？
+    > [!NOTE]
     > Docker Desktop 是安装 docker 最便捷的方式，但如果您的环境只有终端，那么需要手动安装 docker 的各项依赖，其中，docker engine 与 docker compose 是必须要安装的。
 -   `OpenSSL`：安装过程中对 OpenSSL 有依赖，需要提前在节点上进行安装。
 
@@ -111,7 +111,7 @@ harbor 的 主容器会自动重启，但是有几个依赖容器并没有加入
     docker load -i fgc_k8s_arm.tar
     ```
 
-    > [!TIP] 从 docker 导出镜像
+    > [!TIP]
     > 可以使用命令 docker save 命令，将 docker 中已有的镜像导出到本地。方便镜像在系统间转移。
     >
     > 示例，将活字格镜像 `armdocker.hzgcloud.com/fgclb/fgc_k8s_arm:10.0.103.0` 保存到 `fgc_k8s_arm.tar` 文件：
@@ -130,7 +130,7 @@ harbor 的 主容器会自动重启，但是有几个依赖容器并没有加入
 
     -   `armdocker.hzgcloud.com/fgclb/fgc_k8s_arm:10.0.103.0` : 导入的活字格镜像。您也可以直接输入镜像 ID。
 
-    > [!IMPORTANT] 镜像标签
+    > [!IMPORTANT]
     > 标签是镜像的版本标识。通过标签，您可以明确标识镜像的具体版本以及所归属的环境仓库。镜像标签的命名规则并不是严格的。但为了确保可读性和统一性，需要遵循一些最佳实践：
     >
     > -   标签名的格式通常为：`<repository>:<tag>`。

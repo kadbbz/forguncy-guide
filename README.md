@@ -6,16 +6,16 @@
 
 ## 环境依赖
 
-- node 18+
-- npm 
-- Vue 3 + TypeScript + Vite
+-   node 18+
+-   npm
+-   Vue 3 + TypeScript + Vite
 
 ## 运行
 
 1. 当前目录下，终端运行 `npm install`，安装项目所有依赖。
 2. 依赖安装成功后，终端运行 `npm run docs:dev`，启动开发环境。
 
-   > 终端运行 `npm run docs-expose:dev` 可将本地的服务对外暴露。
+    > 终端运行 `npm run docs-expose:dev` 可将本地的服务对外暴露。
 
 3. 浏览器访问对应路径即可本地查看文档。
 
@@ -34,23 +34,30 @@
 └── package.json
 ```
 
-- `package.json`: 工程配置
-- `docs`: 文档目录
-  
-    - `.vitepress`: 文档配置目录，其中 `config.mts` 为配置文件，导航、菜单、样式、交互等都在此进行配置。`meta.mts` 为配置所依赖的元数据。
-    - `public`: 静态资源。
-    - `guide`: 学习指南根目录。
-    - `solution`: 解决方案根目录。 
-    - `standard`: 标准化根目录。
-    - `index.md`: 首页。
+-   `package.json`: 工程配置
+-   `docs`: 文档目录
+
+    -   `.vitepress`: 文档配置目录，其中 `config.ts` 为配置文件，导航、菜单、样式、交互等都在此进行配置。`meta.ts` 为配置所依赖的元数据。
+    -   `public`: 静态资源。
+    -   `guide`: 学习指南根目录。
+    -   `solution`: 解决方案根目录。
+    -   `standard`: 标准化根目录。
+    -   `index.md`: 首页。
 
 ## 文档编写说明
 
-### 格式
 1. 文档编写请遵循标准的 `Markdown` 语法。
-2. 对于 vitepress 中专属的自定义容器语法，在本文档中的使用规范如下：
-   - `info`：补充说明，标题文字请优先默认值 `📍 INFO`；
-   - `tip`：提示说明，，标题文字请优先默认值 `🔔 TIP`；
-   - `warning`：警示说明，标题文字请优先默认值 `⚠️ WARNING`；
-   - `info`：禁止说明，标题文字请优先默认值 `‼️ DANGER`；
+2. 为确保在 Github 上的文档风格一致，请使用 [Github 风格的警报](https://vitepress.dev/zh/guide/markdown#github-flavored-alerts)
 3. 静态资源的引用，请优先选择相对路径。
+
+## PDF 导出
+
+文档使用 [`vitepress-export-pdf`](https://github.com/condorheroblog/vitepress-export-pdf) 实现 pdf 导出。
+
+导出配置文件为：`vitepress-pdf.config.ts`。导出时请自行配置对应的 `router`、`sorter` 以及排除规则 `routePatterns`。
+
+导出命令为：
+
+```bash
+npm run docs:export
+```

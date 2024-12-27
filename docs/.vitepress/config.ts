@@ -25,8 +25,8 @@ const nav : DefaultTheme.Config['nav'] = [
         link: '/solution/load-balance/introduction'
       },
       {
-        text: '反向代理',
-        link: '/solution/reverse-proxy/introduction'
+        text: '网关服务',
+        link: '/solution/gateway/introduction'
       },
       {
         text: '日志监控',
@@ -103,7 +103,7 @@ const sidebar: DefaultTheme.Config['sidebar'] = {
   // ],
   '/standard/': siderbarStandard(),
   '/solution/load-balance': sidebarSolutionLB(),
-  // '/solution/reverse-proxy/': siderbarSolutionProxy(),
+  '/solution/gateway/': siderbarSolutionGateway(),
   // '/solution/log-monitor/': sidebarSolutionMonitor(),
 }
 
@@ -253,10 +253,34 @@ function sidebarSolutionLB() {
   ]
 }
 
-// 反向代理的左侧菜单
-function siderbarSolutionProxy() {
+// 网关服务的左侧菜单
+function siderbarSolutionGateway() {
   return [
-    { text: '简介', link: "/solution/reverse-proxy/introduction" },
+    { text: '简介', link: "/solution/gateway/introduction" },
+    { 
+      text: '基础使用',
+      items: [
+        { text: 'Web 服务器', link: "/solution/gateway/web-server" },
+        { text: '反向代理', link: "/solution/gateway/reverse-proxy" },
+        { text: '负载均衡器', link: "/solution/gateway/load-balance" },
+        { text: '重定向', link: "/solution/gateway/redirect" },
+        { text: '防盗链', link: "/solution/gateway/defend-link" }
+      ]
+    },
+    { text: '进阶',
+      items: [
+        {text: 'HTTPS', link: "/solution/gateway/https"},
+        { text: '认证证书', link: "/solution/gateway/ssl-cert" },
+        { text: '跨域请求', link: "/solution/gateway/cross-domain" },
+      ]
+    },
+    { text: 'Nginx 参考',
+      items: [
+        { text: '命令行命令', link: "/solution/gateway/nginx-cli" },
+        { text: '配置指令', link: "/solution/gateway/nginx-config" },
+        { text: '日志', link: "/solution/gateway/nginx-log" },
+      ]
+    },
     
   ]
 }

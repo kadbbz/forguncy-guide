@@ -2,7 +2,7 @@
 
 从整体平台架构出发，网关负责的是整个集群南北流量的管控。而活字格只是 Kubernetes 生态中的一个应用。因此，活字格集群方案中，并没有在初始配置中加入网关部分。对于流向活字格的南北流量，需要依赖于 kubernetes 的 ingress，或者自行在集群外部构建网关服务进行流量的管控与代理。
 
-> [!NOTE] 集群流量走向
+> [!NOTE]
 > 在一个标准的集群网络中，存在两个方向的网络流量，分别是南北流量和东西流量。
 > ![集群流量走向](../images/cluster-traffic.png)
 >
@@ -95,8 +95,8 @@ http {
 -   使用 `ip_hash` 将流量按照轮询的方式打到每个 node 上。
 -   对管理控制台和活字格应用配置反向代理。
 
-> [!TIP] 不熟悉该配置文件？
-> 您可以参阅[这里](/solution/reverse-proxy/introduction.md)学习 Nginx 的使用场景以及反向代理的具体说明
+> [!TIP]
+> 您可以参阅[这里](/solution/gateway/introduction)学习 Nginx 的使用场景以及反向代理的具体说明。
 
 ## Ingress
 

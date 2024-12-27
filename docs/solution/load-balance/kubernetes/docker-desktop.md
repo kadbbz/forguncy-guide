@@ -25,7 +25,7 @@
 
 ![开启集群](../../images/docker-desktop-installation.png)
 
-> [!TIP] 镜像无法下载？
+> [!TIP]
 > 由于网络原因，可能会存在镜像拉取失败的情况。此时我们可以选择使用[镜像加速](../mirror)来解决该问题。
 
 当 Kubernetes 启动并成功运行时，Docker Desktop 的底部状态栏和 Docker 菜单会额外显示一个状态栏。
