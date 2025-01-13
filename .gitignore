@@ -13,6 +13,7 @@ dist.*
 cache
 dist-ssr
 *.local
+output-pdf/*
 
 # Editor directories and files
 .vscode/*

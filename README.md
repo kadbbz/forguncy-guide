@@ -54,7 +54,10 @@
 
 文档使用 [`vitepress-export-pdf`](https://github.com/condorheroblog/vitepress-export-pdf) 实现 pdf 导出。
 
-导出配置文件为：`vitepress-pdf.config.ts`。导出时请自行配置对应的 `router`、`sorter` 以及排除规则 `routePatterns`。
+导出配置文件为：`vitepress-pdf.config.ts`。导出时请自行修改 `targetExportPath` 以及 `routePatterns`。
+
+> [!TIP]
+> routePatterns 的配置规则是，先配置全部数据，然后排除不需要导出的模块。
 
 导出命令为：
 
