@@ -2,7 +2,7 @@ import { DefaultTheme, defineConfig } from 'vitepress'
 import { baseUrl, siteDescription, siteTitle } from './meta'
 
 /* 顶部的导航菜单 */
-const nav : DefaultTheme.Config['nav'] = [
+const nav: DefaultTheme.Config['nav'] = [
   // {
   //   text: '学习指南',
   //   items: [
@@ -125,7 +125,7 @@ function siderbarStandard() {
       text: 'UI & UX',
       items: [
         { text: '设计原则', link: '/standard/design/principle' },
-        { 
+        {
           text: '样式',
           collapsed: true,
           items: [
@@ -134,7 +134,7 @@ function siderbarStandard() {
             { text: '字体', link: '/standard/design/style/typeface' },
           ]
         },
-        { 
+        {
           text: '模式',
           collapsed: true,
           items: [
@@ -162,7 +162,7 @@ function siderbarStandard() {
             { text: '文档注释', link: '/standard/dev/base/docs' },
           ],
         },
-        { 
+        {
           text: '数据库',
           collapsed: true,
           items: [
@@ -173,7 +173,7 @@ function siderbarStandard() {
         },
         { text: '工程扩展', link: '/standard/dev/expansion' },
         { text: '协同开发', link: '/standard/dev/cooperation' },
-        { 
+        {
           text: '配置管理',
           collapsed: true,
           items: [
@@ -181,7 +181,7 @@ function siderbarStandard() {
             { text: '应用配置', link: '/standard/dev/configuration/application' },
           ],
         },
-        
+
       ]
     },
     {
@@ -205,11 +205,11 @@ function sidebarSolutionLB() {
   return [
     { text: '简介', link: "/solution/load-balance/introduction" },
     { text: '环境要求', link: "/solution/load-balance/env-base" },
-    
-    { 
+
+    {
       text: '集群安装',
       items: [
-        { text: '基础平台', link: '/solution/load-balance/platform'},
+        { text: '基础平台', link: '/solution/load-balance/platform' },
         { text: '文件共享', link: '/solution/load-balance/file-share' },
         { text: 'Chart 安装', link: '/solution/load-balance/chart-install' },
         { text: '配置设置', link: '/solution/load-balance/config' },
@@ -222,12 +222,13 @@ function sidebarSolutionLB() {
     {
       text: '参考',
       items: [
-        { text: 'Kubernetes', 
+        {
+          text: 'Kubernetes',
           items: [
-            { text: 'minikube', link: '/solution/load-balance/kubernetes/minikube'},
-            { text: 'Docker Desktop', link: '/solution/load-balance/kubernetes/docker-desktop'},
-            { text: 'kubectl', link: '/solution/load-balance/kubernetes/kubectl'},
-            { 
+            { text: 'minikube', link: '/solution/load-balance/kubernetes/minikube' },
+            { text: 'Docker Desktop', link: '/solution/load-balance/kubernetes/docker-desktop' },
+            { text: 'kubectl', link: '/solution/load-balance/kubernetes/kubectl' },
+            {
               text: '标准安装',
               link: '/solution/load-balance/kubernetes/manual',
               collapsed: true,
@@ -243,11 +244,11 @@ function sidebarSolutionLB() {
             { text: 'KubeKey', link: '/solution/load-balance/kubernetes/kubekey' },
           ]
         },
-        { 
-          text: 'Helm', 
+        {
+          text: 'Helm',
           link: '/solution/load-balance/helm'
         },
-        { text: '镜像加速', link: '/solution/load-balance/mirror'},
+        { text: '镜像加速', link: '/solution/load-balance/mirror' },
       ]
     }
   ]
@@ -257,7 +258,7 @@ function sidebarSolutionLB() {
 function siderbarSolutionGateway() {
   return [
     { text: '简介', link: "/solution/gateway/introduction" },
-    { 
+    {
       text: '基础使用',
       items: [
         { text: 'Web 服务器', link: "/solution/gateway/web-server" },
@@ -267,21 +268,23 @@ function siderbarSolutionGateway() {
         { text: '防盗链', link: "/solution/gateway/defend-link" }
       ]
     },
-    { text: '进阶',
+    {
+      text: '进阶',
       items: [
-        {text: 'HTTPS', link: "/solution/gateway/https"},
+        { text: 'HTTPS', link: "/solution/gateway/https" },
         { text: '认证证书', link: "/solution/gateway/ssl-cert" },
         { text: '跨域请求', link: "/solution/gateway/cross-domain" },
       ]
     },
-    { text: 'Nginx 参考',
+    {
+      text: 'Nginx 参考',
       items: [
         { text: '命令行命令', link: "/solution/gateway/nginx-cli" },
         { text: '配置指令', link: "/solution/gateway/nginx-config" },
         { text: '日志', link: "/solution/gateway/nginx-log" },
       ]
     },
-    
+
   ]
 }
 
@@ -289,21 +292,32 @@ function siderbarSolutionGateway() {
 function sidebarSolutionMonitor() {
   return [
     { text: '简介', link: "/solution/log-monitor/introduction" },
-    
+
   ]
 }
 
 /* 网站配置 */
 export default defineConfig({
-  
+
   base: baseUrl,
   title: siteTitle,
   description: siteDescription,
-  
+
   head: [
-    ['link', { rel: 'icon',href: '/forguncy-icon.png' }]
+    ['link', { rel: 'icon', href: '/forguncy-icon.png' }],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-JPQJY2Z57W' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JPQJY2Z57W');`
+    ]
   ],
-  
 
   lastUpdated: true,
   cleanUrls: true,
@@ -325,7 +339,7 @@ export default defineConfig({
       lang: 'zh-CN'
     },
   },
-  
+
   /* 主题配置 */
   themeConfig: {
     i18nRouting: false,
@@ -333,18 +347,18 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
-    
+
     /* 当前页右侧导航目录 */
     outline: {
       level: 'deep',
       label: '当前页导航'
     },
-    
+
     docFooter: {
       prev: '上一篇',
       next: '下一篇'
     },
-    
+
     returnToTopLabel: '返回顶部',
     darkModeSwitchLabel: '外观',
     sidebarMenuLabel: '目录',
