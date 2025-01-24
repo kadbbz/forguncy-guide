@@ -249,6 +249,7 @@ function sidebarSolutionLB() {
           link: '/solution/load-balance/helm'
         },
         { text: '镜像加速', link: '/solution/load-balance/mirror' },
+        { text: '漏洞修复', link: '/solution/load-balance/safe' }
       ]
     }
   ]
