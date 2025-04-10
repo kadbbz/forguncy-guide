@@ -1,4 +1,4 @@
-import type {DefaultTheme} from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
 import { defineUserConfig } from "vitepress-export-pdf"
 
 import userConfig from './config.js'
@@ -23,7 +23,7 @@ function extractLinksFromConfig(config: DefaultTheme.Config) {
 
 const links = extractLinksFromConfig(userConfig.themeConfig!)
 
-const targetExportPath = ['/solution/gateway']
+const targetExportPath = ['/standard']
 
 function filterRoutesByPaths(routes: string[], paths: string[]): string[] {
   return routes.filter(route =>
@@ -42,7 +42,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 </div>`
 
 export default defineUserConfig({
-  outFile: '格言格语-网关方案.pdf',
+  outFile: '周黑鸭低代码咨询-标准化方案.pdf',
   outDir: 'output-pdf',
   pdfOptions: {
     format: 'A4',
@@ -57,27 +57,31 @@ export default defineUserConfig({
       top: 60,
     },
   },
-  urlOrigin: 'https://forguncyse.github.io',
+  // 如果希望 pdf 的外链生效，请释放当前配置
+  // urlOrigin: 'https://forguncyse.github.io',
+  urlOrigin: 'http://localhost',
   sorter: (pageA, pageB) => {
-    const aIndex = exportPaths.findIndex(route => { 
+    // 应用前缀，匹配应用路径。如果前缀修改，请同步修该变量值
+    const prefix = "/forguncy-guide"
+    const aIndex = exportPaths.findIndex(route => {
       const path = route.endsWith('.html') ? route.slice(0, -5) : route
-      return path === pageA.path
+      return prefix + path === pageA.path
     })
-    const bIndex = exportPaths.findIndex(route => { 
+    const bIndex = exportPaths.findIndex(route => {
       const path = route.endsWith('.html') ? route.slice(0, -5) : route
-      return path === pageB.path
+      return prefix + path === pageB.path
     })
     return aIndex - bIndex
   },
   routePatterns: [
     '**',
     '!/forguncy-guide/index',
-    '!/forguncy-guide/lb-index',
+    // '!/forguncy-guide/standard-index',
+    '!/forguncy-guide/standard/question',
     '!/forguncy-guide/guide/**',
-    '!/forguncy-guide/standard/**',
-    '!/forguncy-guide/solution/load-balance/**',
-    // '!/forguncy-guide/solution/gateway/**',
-    '!/forguncy-guide/solution/log-monitor/**',
-    '!/404.html'
+    // '!/forguncy-guide/standard/**',
+
+    '!/404.html',
+    // '/forguncy-guide/solution/load-balance/kubernetes/minikube'
   ]
 });

@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: 格言格语
+title: 低代码项目开发规约
 titleTemplate: 活字格技巧的百科大全
 
 hero:
-    name: 格言格语
+    name: 低代码项目开发规约
     text: 活字格技巧的百科大全
     tagline: 从入门到精通，企业级低代码开发平台的一站式学习!
     actions:
