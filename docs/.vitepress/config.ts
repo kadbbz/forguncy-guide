@@ -4,7 +4,7 @@ import { baseUrl, siteDescription, siteTitle } from './meta'
 /* 顶部的导航菜单 */
 const nav: DefaultTheme.Config['nav'] = [
   {
-    text: '标准化',
+    text: '开发规约',
     link: '/standard/introduction',
     activeMatch: '^/standard'
   },
