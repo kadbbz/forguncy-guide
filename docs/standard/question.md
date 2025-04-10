@@ -29,12 +29,11 @@ const members = [
 
 ## 谁在维护该文档？
 
-本文档目前由 GrapeCity 中活字格产品线的售前团队负责维护。
+本文档目前由 GrapeCity 中技术咨询团队负责维护。
 
 <VPTeamMembers size="small" :members="members" />
 
 如果您对文档中的描述存在问题，或者希望为文档的内容贡献自己的力量，请联系我们～
-
 
 
 ## 应该如何提升自己的前置能力？
