@@ -1,6 +1,4 @@
-# 格言格语
-
-售前团队的文本资料汇集地，活字格技术方案的图书馆。
+# 低代码项目开发规约
 
 本工程基于 [vitepress](https://vitepress.dev/guide/what-is-vitepress) 构建。
 
@@ -26,10 +24,8 @@
 │   ├── .vitepress
 │   │   ├── config.mts
 │   │   └── meta.mts
-│   ├── guide
 │   ├── index.md
 │   ├── public
-│   ├── solution
 │   └── standard
 └── package.json
 ```
@@ -40,8 +36,6 @@
     -   `.vitepress`: 文档配置目录，其中 `config.ts` 为配置文件，导航、菜单、样式、交互等都在此进行配置。`meta.ts` 为配置所依赖的元数据。
     -   `public`: 静态资源。
     -   `guide`: 学习指南根目录。
-    -   `solution`: 解决方案根目录。
-    -   `standard`: 标准化根目录。
     -   `index.md`: 首页。
 
 ## 文档编写说明
