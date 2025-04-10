@@ -23,7 +23,8 @@
 ├── docs
 │   ├── .vitepress
 │   │   ├── config.mts
-│   │   └── meta.mts
+│   │   ├── meta.mts
+│   │   └── vitepress-pdf.config.ts
 │   ├── index.md
 │   ├── public
 │   └── standard
@@ -33,7 +34,7 @@
 -   `package.json`: 工程配置
 -   `docs`: 文档目录
 
-    -   `.vitepress`: 文档配置目录，其中 `config.ts` 为配置文件，导航、菜单、样式、交互等都在此进行配置。`meta.ts` 为配置所依赖的元数据。
+    -   `.vitepress`: 文档配置目录，其中 `config.ts` 为配置文件，导航、菜单、样式、交互等都在此进行配置；`meta.ts` 为配置所依赖的元数据；`vitepress-pdf.config.ts` 为 pdf 导出配置文件。
     -   `public`: 静态资源。
     -   `guide`: 学习指南根目录。
     -   `index.md`: 首页。
