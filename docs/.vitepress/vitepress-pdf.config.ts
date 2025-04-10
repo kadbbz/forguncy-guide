@@ -42,7 +42,7 @@ const footerTemplate = `<div style="margin-bottom: -0.4cm; height: 70%; width: 1
 </div>`
 
 export default defineUserConfig({
-  outFile: '周黑鸭低代码咨询-标准化方案.pdf',
+  outFile: '低代码项目开发规约.pdf',
   outDir: 'output-pdf',
   pdfOptions: {
     format: 'A4',
