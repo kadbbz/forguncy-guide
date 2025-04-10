@@ -31,7 +31,7 @@
 1. 可以轻松增加缓存；
 2. 数据字段增减时，不需要修改返回值，只需要在数据源处修改即可，返回值变更同理。
 
-PS：「创建对象」命令为插件，请访问[葡萄城市场](https://marketplace.grapecity.com.cn/ApplicationDetails?productID=SP2206290001&productDetailID=D2206290001&tabName=Tabs_detail)进行下载安装。
+PS：「创建对象」命令为插件「对象与集合操作工具」内置的一个命令，请访问[葡萄城市场](https://marketplace.grapecity.com.cn/ApplicationDetails?productID=SP2211250001&productDetailID=D2504070001&tabName=Tabs_detail)进行下载安装。
 :::
 
 【<font color="#F3AA34">参考</font>】在团队能力范围内或合适的应用场景中，可以考虑将共有的服务端命令抽出，放在一个公共应用中，形成公共服务，方便多应用模块调用。
